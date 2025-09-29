@@ -1,0 +1,124 @@
+/* Base */
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #3b82f6;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background: linear-gradient(180deg, #eef2ff, #fff);
+  border-bottom: 1px solid var(--border);
+}
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+.tagline {
+  margin: .25rem 0 0;
+  color: var(--muted);
+}
+
+/* Nav / Sommaire */
+.toc {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.menu {
+  margin: 0 auto;
+  padding: 0 .75rem;
+  list-style: none;
+  max-width: 1000px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.menu > li {
+  position: relative;
+}
+.menu-link,
+.menu a {
+  display: inline-block;
+  padding: .9rem .8rem;
+  text-decoration: none;
+  color: var(--text);
+  border-radius: .6rem;
+}
+.menu a:hover,
+.menu a:focus {
+  background: #eff6ff;
+  color: var(--accent);
+  outline: none;
+}
+
+/* Sous-menu (menu déroulant) */
+.submenu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + .25rem);
+  min-width: 220px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .7rem;
+  padding: .35rem;
+  list-style: none;
+  margin: 0;
+  display: none;            /* caché par défaut */
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  z-index: 20;
+}
+.submenu li a {
+  display: block;
+  padding: .6rem .7rem;
+  border-radius: .5rem;
+}
+.submenu li a:hover,
+.submenu li a:focus {
+  background: #f3f4f6;
+}
+
+/* Afficher le sous-menu au survol ou au focus clavier */
+.has-submenu:hover > .submenu,
+.has-submenu:focus-within > .submenu {
+  display: block;
+}
+
+/* Contenu */
+.content {
+  max-width: 1000px;
+  margin: 1.25rem auto;
+  padding: 0 1rem 2rem;
+}
+.section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin: 1rem 0;
+}
+.section h2 {
+  margin-top: 0;
+  scroll-margin-top: 90px; /* pour que l’ancre ne soit pas cachée sous le header */
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: var(--muted);
+}
