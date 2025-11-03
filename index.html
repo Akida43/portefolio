@@ -5,31 +5,122 @@
   <title>Portfolio – Akida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* 🌸 Couleurs pastel */
+    :root {
+      --rose: #f7d9e3;
+      --beige: #fdf6f0;
+      --gris: #777;
+      --fond: #fffdfc;
+      --accent: #ffb6c1;
+      --ombre: rgba(0,0,0,0.05);
+    }
+
+    /* 🌼 Style global */
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      background: var(--fond);
       margin: 0;
+      color: #333;
       line-height: 1.6;
     }
+
     header {
-      background: #111;
-      color: white;
-      padding: 20px;
+      background: var(--rose);
+      padding: 2rem 1rem;
       text-align: center;
+      box-shadow: 0 2px 5px var(--ombre);
     }
+
+    header h1 {
+      margin: 0;
+      color: #333;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: var(--gris);
+      margin: 0.3rem 0 1.5rem;
+    }
+
+    /* 🌷 Barre de navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
     nav a {
-      color: white;
+      background: white;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
       text-decoration: none;
-      margin: 10px;
+      color: #333;
+      box-shadow: 0 2px 5px var(--ombre);
+      transition: all 0.2s ease;
     }
+
     nav a:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* 💫 Sections */
+    section {
+      background: white;
+      margin: 2rem auto;
+      max-width: 900px;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 3px 10px var(--ombre);
+    }
+
+    section h2 {
+      border-bottom: 2px solid var(--rose);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5em;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    ul li a:hover {
+      color: var(--accent);
       text-decoration: underline;
     }
-    section {
-      padding: 30px;
-      border-bottom: 1px solid #ddd;
+
+    /* 🩵 Pied de page */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--gris);
+      background: var(--beige);
+      border-top: 1px solid #eee;
+      margin-top: 2rem;
     }
-    h2 {
-      color: #222;
+
+    footer small {
+      font-size: 0.9em;
+    }
+
+    /* 🩷 Animation douce quand on clique sur un lien */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -37,6 +128,7 @@
 
   <header>
     <h1>Portfolio – Akida</h1>
+    <p>Introduction aux systèmes d’information – S5</p>
     <nav>
       <a href="#travaux">Travaux</a>
       <a href="#notes">Notes</a>
@@ -44,13 +136,13 @@
       <a href="#certifs">Certifications</a>
       <a href="#projet">Projet final</a>
       <a href="#diapo">Diaporama</a>
-      <a href="#autres">Autres ressources</a>
+      <a href="#autres">Ressources</a>
     </nav>
   </header>
 
   <section id="travaux">
     <h2>Rubrique 1 – Travaux demandés</h2>
-    <p>➡️ Ici, tu mettras tes fichiers de TD, projets, etc.</p>
+    <p>➡️ Dépose ici tes travaux, projets et mini-projets du semestre.</p>
     <ul>
       <li><a href="travaux/td1.pdf" target="_blank">TD1 – Exemple</a></li>
       <li><a href="travaux/td2.pdf" target="_blank">TD2 – Exemple</a></li>
@@ -59,36 +151,36 @@
 
   <section id="notes">
     <h2>Rubrique 2 – Notes de cours</h2>
-    <p>➡️ Tes notes de cours individuelles ici (fichier PDF ou texte).</p>
+    <p>➡️ Tes notes de cours personnelles ou fichiers PDF.</p>
   </section>
 
   <section id="docs">
     <h2>Rubrique 3 – Documents d’un SI</h2>
-    <p>➡️ Mets ici tes diagrammes, schémas, etc.</p>
+    <p>➡️ Diagrammes BPMN, modèles UML, ou tout autre document SI.</p>
   </section>
 
   <section id="certifs">
     <h2>Rubrique 4 – Certifications</h2>
-    <p>➡️ Tes attestations ou certificats PDF.</p>
+    <p>➡️ Tes attestations, badges ou certificats de formation.</p>
   </section>
 
   <section id="projet">
     <h2>Rubrique 5 – Projet final</h2>
-    <p>➡️ Présentation de ton projet + lien vers ton rapport PDF.</p>
+    <p>➡️ Présente ton projet de fin de module avec un lien vers le rapport PDF ou la démo.</p>
   </section>
 
   <section id="diapo">
     <h2>Rubrique 6 – Diaporama</h2>
-    <p>➡️ Lien vers ton diaporama de soutenance.</p>
+    <p>➡️ Ajoute ici ton diaporama de soutenance (format PDF).</p>
   </section>
 
   <section id="autres">
     <h2>Rubrique 7 – Autres ressources</h2>
-    <p>➡️ Liens vers tes articles, lectures, etc.</p>
+    <p>➡️ Liens vers tes recherches, articles ou outils utiles.</p>
   </section>
 
-  <footer style="text-align:center; padding:20px; background:#f1f1f1;">
-    <small>© 2025 Akida — Hébergé sur GitHub Pages</small>
+  <footer>
+    <small>© 2025 Akida — Portfolio hébergé sur GitHub Pages</small>
   </footer>
 
 </body>
