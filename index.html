@@ -5,125 +5,69 @@
   <title>Portfolio – Akida Yattassaye</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* 🎨 PALETTE PASTEL */
     :root{
-      --rose:#ffdce3;
-      --lavande:#e6deff;
-      --menthe:#d8f8f0;
-      --pêche:#ffe9d2;
-      --bleu:#d9edff;
-      --fond:#fffdfc;
-      --texte:#2b2b2b;
-      --muted:#6f6f6f;
-      --ombre:0 10px 30px rgba(0,0,0,.06);
-      --radius:20px;
-      --pad:clamp(16px,3vw,28px);
-      --maxw:1000px;
+      --rose:#ffdce3;--lavande:#e6deff;--menthe:#d8f8f0;--peche:#ffe9d2;--bleu:#d9edff;
+      --fond:#fffdfc;--texte:#2b2b2b;--muted:#6f6f6f;
+      --ombre:0 10px 30px rgba(0,0,0,.06);--radius:20px;--pad:clamp(16px,3vw,28px);--maxw:1000px;
     }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
     body{
-      margin:0;
-      font-family:"Poppins","Segoe UI",Arial,sans-serif;
-      background:linear-gradient(135deg,var(--rose),var(--lavande),var(--menthe),var(--pêche),var(--bleu));
-      background-size:400% 400%;
-      animation:gradflow 20s ease infinite;
-      color:var(--texte);
-      line-height:1.65;
+      margin:0;font-family:"Poppins","Segoe UI",Arial,sans-serif;color:var(--texte);line-height:1.65;
+      background:linear-gradient(135deg,var(--rose),var(--lavande),var(--menthe),var(--peche),var(--bleu));
+      background-size:400% 400%;animation:gradflow 20s ease infinite;
     }
     @keyframes gradflow{
       0%{background-position:0% 50%}
       50%{background-position:100% 50%}
       100%{background-position:0% 50%}
     }
-
     a{text-decoration:none;color:inherit}
     h1,h2{margin:0}
-
-    /* 🌸 HERO */
     header.hero{
-      text-align:center;
-      padding:calc(var(--pad)*2) var(--pad);
-      background:rgba(255,255,255,.55);
-      backdrop-filter:blur(10px);
-      border-bottom:2px solid rgba(255,255,255,.3);
-      box-shadow:var(--ombre);
+      text-align:center;padding:calc(var(--pad)*2) var(--pad);
+      background:rgba(255,255,255,.55);backdrop-filter:blur(10px);
+      border-bottom:2px solid rgba(255,255,255,.3);box-shadow:var(--ombre);
     }
     header.hero h1{
       font-size:clamp(1.8rem,4.8vw,3rem);
       background:linear-gradient(90deg,#ff9eb8,#c49bff,#93ffd5);
-      -webkit-background-clip:text;
-      color:transparent;
+      -webkit-background-clip:text;color:transparent;
     }
     header.hero p{color:#333;margin:.5rem 0 1.5rem;font-weight:500}
-    nav.nav{
-      display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem;
-    }
+    nav.nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem}
     .chip{
-      background:rgba(255,255,255,.9);
-      border-radius:999px;
-      padding:.6rem 1rem;
-      font-weight:600;
-      color:#333;
-      box-shadow:0 3px 10px rgba(0,0,0,.1);
-      transition:.25s ease;
+      background:rgba(255,255,255,.9);border-radius:999px;padding:.6rem 1rem;font-weight:600;color:#333;
+      box-shadow:0 3px 10px rgba(0,0,0,.1);transition:.25s ease;
     }
-    .chip:hover{
-      transform:translateY(-3px);
-      background:linear-gradient(90deg,var(--rose),var(--lavande),var(--menthe));
-    }
-
-    /* 🪞 STRUCTURE */
+    .chip:hover{transform:translateY(-3px);background:linear-gradient(90deg,var(--rose),var(--lavande),var(--menthe))}
     main.wrap{max-width:var(--maxw);margin:0 auto;padding:calc(var(--pad)*1.4) var(--pad)}
     section.section{
-      background:rgba(255,255,255,.92);
-      border-radius:var(--radius);
-      box-shadow:0 8px 25px rgba(0,0,0,.08);
-      margin:0 0 calc(var(--pad)*1.2);
-      padding:calc(var(--pad)*1.4);
-      position:relative;
-      overflow:hidden;
+      background:rgba(255,255,255,.92);border-radius:var(--radius);box-shadow:0 8px 25px rgba(0,0,0,.08);
+      margin:0 0 calc(var(--pad)*1.2);padding:calc(var(--pad)*1.4);position:relative;overflow:hidden;
     }
     section.section::before{
-      content:"";
-      position:absolute;
-      inset:0;
+      content:"";position:absolute;inset:0;opacity:.25;pointer-events:none;
       background:radial-gradient(180px 180px at 10% 20%,var(--rose),transparent 70%),
                  radial-gradient(200px 200px at 90% 80%,var(--menthe),transparent 70%),
                  radial-gradient(200px 200px at 50% -10%,var(--lavande),transparent 70%);
-      opacity:.25;
-      pointer-events:none;
     }
-
     .title{display:flex;align-items:center;gap:.6rem;font-size:1.4rem;margin-bottom:1rem}
-    .dot{width:12px;height:12px;border-radius:50%;background:var(--rose);
-      box-shadow:0 0 0 4px rgba(255,255,255,.4)}
-
-    /* 🌼 INFO BLOCS */
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 4px rgba(255,255,255,.4)}
     .info-grid{display:grid;gap:1rem;grid-template-columns:1fr}
     @media(min-width:780px){.info-grid{grid-template-columns:repeat(2,1fr)}}
     .ibox{
-      border-radius:16px;
-      padding:1rem 1.2rem;
-      background:linear-gradient(135deg,var(--lavande),var(--pêche),var(--menthe));
-      box-shadow:0 6px 14px rgba(0,0,0,.05);
-      transition:.3s;
+      border-radius:16px;padding:1rem 1.2rem;
+      background:linear-gradient(135deg,var(--lavande),var(--peche),var(--menthe));
+      box-shadow:0 6px 14px rgba(0,0,0,.05);transition:.3s;
     }
     .ibox:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.08)}
     .ibox h4{margin:.2rem 0 .5rem;font-size:1.05rem}
     .ibox ul{margin:.2rem 0 0;padding-left:1.1rem}
     .ibox li{margin:.2rem 0}
-
-    footer{
-      text-align:center;
-      color:#444;
-      font-weight:500;
-      padding:1.5rem;
-      background:rgba(255,255,255,.6);
-      border-top:2px solid rgba(255,255,255,.3);
-      backdrop-filter:blur(8px);
-    }
+    p.note{margin-top:1rem;padding:.8rem 1rem;border-left:4px solid var(--lavande);
+      background:rgba(255,255,255,.6);border-radius:10px;font-size:.95rem}
+    footer{text-align:center;color:#444;font-weight:500;padding:1.5rem;
+      background:rgba(255,255,255,.6);border-top:2px solid rgba(255,255,255,.3);backdrop-filter:blur(8px)}
   </style>
 </head>
 <body>
@@ -156,6 +100,7 @@
         <ul><li>Tous les travaux sont <strong>complets</strong> et <strong>correctement nommés</strong>.</li></ul>
       </div>
     </div>
+    <p class="note">📎 Documents déposés ici : ajoute directement tes fichiers PDF, images ou dossiers dans cette section.</p>
   </section>
 
   <section id="notes" class="section">
@@ -170,6 +115,7 @@
         <ul><li>Les notes sont <strong>claires</strong>, <strong>structurées</strong> et <strong>accessibles</strong>.</li></ul>
       </div>
     </div>
+    <p class="note">📎 Dépose ici tes fichiers de notes (PDF, Word, images ou textes).</p>
   </section>
 
   <section id="docs" class="section">
@@ -184,6 +130,7 @@
         <ul><li>Les documents sont <strong>rédigés</strong>, <strong>classés</strong> et <strong>bien présentés</strong>.</li></ul>
       </div>
     </div>
+    <p class="note">📎 Ajoute ici tes diagrammes, schémas, fichiers PDF ou images de ton système d’information.</p>
   </section>
 
   <section id="certifs" class="section">
@@ -198,6 +145,7 @@
         <ul><li>Les certificats sont <strong>lisibles</strong> et <strong>correctement identifiés</strong>.</li></ul>
       </div>
     </div>
+    <p class="note">📎 Insère ici tes attestations, badges ou certificats (PDF ou image).</p>
   </section>
 
   <section id="projet" class="section">
@@ -212,6 +160,7 @@
         <ul><li>Le projet est <strong>réalisé</strong>, <strong>documenté</strong> et <strong>présenté professionnellement</strong>.</li></ul>
       </div>
     </div>
+    <p class="note">📎 Ajoute ici ton rapport, ton code, ou les livrables de ton projet final.</p>
   </section>
 
   <section id="diapo" class="section">
@@ -226,6 +175,7 @@
         <ul><li>Le diaporama est <strong>structuré</strong>, <strong>lisible</strong> et <strong>adapté à l’oral</strong>.</li></ul>
       </div>
     </div>
+    <p class="note">📎 Dépose ici ton diaporama (PDF ou PowerPoint) pour la soutenance.</p>
   </section>
 
   <section id="ressources" class="section">
@@ -240,6 +190,7 @@
         <ul><li>Les ressources sont <strong>pertinentes</strong>, <strong>variées</strong> et <strong>référencées</strong>.</li></ul>
       </div>
     </div>
+    <p class="note">📎 Dépose ici des liens, PDF, articles ou documents complémentaires utiles à ton apprentissage.</p>
   </section>
 
 </main>
