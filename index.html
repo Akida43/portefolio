@@ -5,175 +5,56 @@
   <title>Portfolio – Akida Yattassaye</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* ===========================
-       🎨 Thème pastel & variables
-       =========================== */
     :root{
-      --bg: #fffdfc;
-      --text: #2b2b2b;
-      --muted: #7a7a7a;
-
-      --rose: #f7d9e3;   /* rose poudré */
-      --mauve:#e9e1ff;   /* lavande */
-      --menthe:#dff6f0;  /* menthe douce */
-      --peche:#ffe8d6;   /* pêche */
-      --accent:#ffb6c1;  /* rose accent */
-      --shadow: 0 10px 30px rgba(10,10,10,.06);
-      --radius: 18px;
-
-      --maxw: 1000px;
-      --pad: clamp(16px, 3vw, 28px);
+      --bg:#fffdfc; --text:#2b2b2b; --muted:#6f6f6f;
+      --rose:#f7d9e3; --mauve:#e9e1ff; --menthe:#dff6f0; --peche:#ffe8d6; --accent:#ffb6c1;
+      --shadow:0 10px 30px rgba(10,10,10,.06); --radius:18px; --maxw:1000px; --pad:clamp(16px,3vw,28px);
     }
-
-    /* ===========================
-       ⚙️ Reset & base
-       =========================== */
-    *{ box-sizing: border-box; }
-    html{ scroll-behavior: smooth; }
-    body{
-      margin:0; font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-      background: var(--bg); color: var(--text); line-height:1.65;
-    }
-    a{ color: inherit; text-decoration: none; }
-    img{ max-width:100%; display:block; }
-
-    /* ===========================
-       🏷️ Badge utilitaire
-       =========================== */
-    .badge{
-      display:inline-block; padding:.25rem .6rem; border-radius:999px;
-      font-size:.8rem; font-weight:600; letter-spacing:.2px;
-      background:#fff; border:1px solid rgba(0,0,0,.06);
-      box-shadow: 0 4px 12px rgba(0,0,0,.05);
-    }
-
-    /* ===========================
-       🧁 Header / Hero
-       =========================== */
-    .hero{
-      position:relative; overflow:hidden;
-      background: linear-gradient(135deg, var(--rose), var(--mauve), var(--menthe));
-      padding: calc(var(--pad)*2) var(--pad) calc(var(--pad)*2.2);
-      text-align:center;
-      box-shadow: var(--shadow);
-    }
-    .hero h1{
-      margin:0 0 .4rem; font-size: clamp(1.8rem, 4.8vw, 3rem);
-      letter-spacing:.4px;
-    }
-    .hero p{
-      margin:.2rem 0 1.2rem; color:#3d3d3d;
-      font-size: clamp(.95rem, 2.3vw, 1.05rem);
-    }
-    /* Décos “blobs” */
-    .blob{
-      position:absolute; border-radius:50%;
-      filter: blur(40px); opacity:.45; pointer-events:none;
-    }
-    .blob.b1{ width:260px; height:260px; background:var(--rose); top:-40px; left:-30px; }
-    .blob.b2{ width:300px; height:300px; background:var(--menthe); bottom:-60px; right:-40px; }
-    .blob.b3{ width:220px; height:220px; background:var(--mauve); top:-50px; right:20%; }
-
-    /* ===========================
-       🧭 Navigation chips
-       =========================== */
-    .nav{
-      display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center;
-      max-width: var(--maxw); margin: 0 auto;
-    }
-    .chip{
-      background:#fff; border:1px solid rgba(0,0,0,.06);
-      border-radius:999px; padding:.55rem .9rem; font-weight:600;
-      transition:.2s ease; box-shadow: var(--shadow);
-    }
-    .chip:hover{ transform: translateY(-2px); background:var(--peche); }
-
-    /* ===========================
-       📦 Contenu
-       =========================== */
-    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: calc(var(--pad)*1.4) var(--pad); }
-
-    .section{
-      position:relative; background:#fff; border:1px solid rgba(0,0,0,.06);
-      border-radius: var(--radius); padding: calc(var(--pad)*1.2);
-      margin: 0 0 calc(var(--pad)*1.1); box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .section::before{
-      content:""; position:absolute; inset:0;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Poppins","Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    /* HERO */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--rose),var(--mauve),var(--menthe));
+      padding:calc(var(--pad)*2) var(--pad) calc(var(--pad)*2.2);text-align:center;box-shadow:var(--shadow)}
+    .hero h1{margin:0 0 .4rem;font-size:clamp(1.8rem,4.8vw,3rem)}
+    .hero p{margin:.2rem 0 1.2rem;color:#3d3d3d}
+    .blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.45;pointer-events:none}
+    .b1{width:260px;height:260px;background:var(--rose);top:-40px;left:-30px}
+    .b2{width:300px;height:300px;background:var(--menthe);bottom:-60px;right:-40px}
+    .b3{width:220px;height:220px;background:var(--mauve);top:-50px;right:20%}
+    /* NAV chips */
+    .nav{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;max-width:var(--maxw);margin:0 auto}
+    .chip{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:999px;padding:.55rem .9rem;font-weight:600;box-shadow:var(--shadow);transition:.2s}
+    .chip:hover{transform:translateY(-2px);background:var(--peche)}
+    /* WRAP + SECTION */
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:calc(var(--pad)*1.4) var(--pad)}
+    .section{position:relative;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);
+      padding:calc(var(--pad)*1.2);margin:0 0 calc(var(--pad)*1.1);box-shadow:var(--shadow);overflow:hidden}
+    .section::before{content:"";position:absolute;inset:0;opacity:.18;pointer-events:none;
       background:
-        radial-gradient(120px 120px at -20px -10px, var(--rose), transparent 60%),
-        radial-gradient(140px 140px at 110% 10%, var(--menthe), transparent 60%),
-        radial-gradient(120px 120px at 10% 120%, var(--mauve), transparent 60%);
-      opacity:.18; pointer-events:none;
-    }
-    .title{
-      display:flex; align-items:center; gap:.7rem; margin:0 0 .8rem;
-      font-size: clamp(1.15rem, 2.6vw, 1.45rem);
-    }
-    .title .dot{
-      width:12px; height:12px; border-radius:50%;
-      background: var(--accent); box-shadow: 0 0 0 4px rgba(255,182,193,.25);
-    }
-    .subtitle{ color:var(--muted); margin: -.35rem 0 1rem; }
-
-    /* Cartes de liens / éléments */
-    .cards{ display:grid; gap: .9rem; grid-template-columns: 1fr; }
-    @media (min-width:720px){ .cards{ grid-template-columns: repeat(2, 1fr); } }
-    .card{
-      background: #fff; border:1px solid rgba(0,0,0,.06);
-      border-radius: 14px; padding: 14px 14px 12px;
-      transition:.2s ease; position:relative; overflow:hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,.05);
-    }
-    .card:hover{ transform: translateY(-3px); }
-    .card .kicker{
-      font-size:.78rem; color:var(--muted); margin-bottom:.35rem;
-      display:flex; align-items:center; gap:.4rem;
-    }
-    .card h4{ margin:.1rem 0 .4rem; font-size:1.02rem; }
-    .card p{ margin:0; color:#585858; font-size:.94rem; }
-    .pill{
-      display:inline-block; padding:.22rem .55rem; border-radius:999px;
-      font-size:.72rem; font-weight:600; background:var(--mauve);
-      border:1px solid rgba(0,0,0,.06);
-    }
-    .pill.pdf{ background:var(--rose); }
-    .pill.link{ background:var(--menthe); }
-
-    /* Séparateur “perles” */
-    .beads{
-      display:flex; align-items:center; gap:8px; margin: 18px 0 6px; opacity:.65;
-    }
-    .beads span{
-      width:6px; height:6px; border-radius:50%;
-      background:linear-gradient(135deg, var(--rose), var(--mauve));
-      box-shadow: 0 2px 6px rgba(0,0,0,.08);
-    }
-    .beads .line{
-      height:2px; flex:1; background:linear-gradient(90deg, var(--rose), var(--menthe));
-      border-radius:2px;
-    }
-
-    /* Footer */
-    footer{
-      text-align:center; color:var(--muted); padding: 26px var(--pad);
-      background: linear-gradient(0deg, #fff, var(--peche));
-      border-top:1px solid rgba(0,0,0,.06);
-    }
+        radial-gradient(120px 120px at -20px -10px,var(--rose),transparent 60%),
+        radial-gradient(140px 140px at 110% 10%,var(--menthe),transparent 60%),
+        radial-gradient(120px 120px at 10% 120%,var(--mauve),transparent 60%)}
+    .title{display:flex;align-items:center;gap:.7rem;margin:0 0 .8rem;font-size:clamp(1.15rem,2.6vw,1.45rem)}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(255,182,193,.25)}
+    .subtitle{color:var(--muted);margin:-.35rem 0 1rem}
+    /* INFO blocks */
+    .info-grid{display:grid;gap:.9rem;grid-template-columns:1fr}
+    @media (min-width:780px){.info-grid{grid-template-columns:repeat(2,1fr)}}
+    .ibox{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+    .ibox h4{margin:.2rem 0 .5rem;font-size:1rem}
+    .ibox ul{margin:.2rem 0 0;padding-left:1rem}
+    .tag{display:inline-block;margin-left:.4rem;padding:.15rem .5rem;border-radius:999px;font-size:.72rem;background:var(--mauve);border:1px solid rgba(0,0,0,.06)}
+    footer{text-align:center;color:var(--muted);padding:26px var(--pad);background:linear-gradient(0deg,#fff,var(--peche));border-top:1px solid rgba(0,0,0,.06)}
   </style>
 </head>
 <body>
-
-  <!-- 🧁 HERO -->
+  <!-- HERO -->
   <header class="hero">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
     <h1>Portfolio – Akida Yattassaye</h1>
     <p>Introduction aux Systèmes d’Information · Semestre 5</p>
-
     <nav class="nav" aria-label="Navigation principale">
       <a class="chip" href="#travaux">🗂️ Travaux</a>
       <a class="chip" href="#notes">📝 Notes</a>
@@ -186,165 +67,145 @@
   </header>
 
   <main class="wrap">
-
     <!-- 1) TRAVAUX -->
     <section id="travaux" class="section" aria-labelledby="t-travaux">
       <h2 class="title" id="t-travaux"><span class="dot"></span>🗂️ Rubrique 1 — Travaux demandés</h2>
-      <p class="subtitle">Dépose tes TD/TP/mini-projets ici. Utilise des noms clairs (ex. <em>2025-10-12_TD1-modelisation.pdf</em>).</p>
-
-      <div class="cards">
-        <a class="card" href="travaux/td1.pdf" target="_blank" rel="noopener">
-          <div class="kicker">TD · <span class="badge">S5</span></div>
-          <h4>TD1 — Modélisation & BPMN</h4>
-          <p>Diagrammes du processus Vente + courte explication.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
-
-        <a class="card" href="travaux/td2.pdf" target="_blank" rel="noopener">
-          <div class="kicker">TD · <span class="badge">S5</span></div>
-          <h4>TD2 — UML (cas d’utilisation + classes)</h4>
-          <p>Use cases, classes, relations et mini glossaire.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
+      <p class="subtitle">Cette section rassemblera les travaux réalisés.</p>
+      <div class="info-grid">
+        <div class="ibox">
+          <h4>Compétence visée</h4>
+          <ul>
+            <li>Gérer et organiser ses productions académiques.</li>
+          </ul>
+        </div>
+        <div class="ibox">
+          <h4>Critères de réussite</h4>
+          <ul>
+            <li>Tous les travaux demandés sont déposés, <strong>complets</strong> et <strong>correctement nommés</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- 2) NOTES -->
     <section id="notes" class="section" aria-labelledby="t-notes">
       <h2 class="title" id="t-notes"><span class="dot"></span>📝 Rubrique 2 — Notes de cours</h2>
-      <p class="subtitle">Tes notes personnelles (Markdown/PDF). Résume chapitre par chapitre avec des puces.</p>
-
-      <div class="cards">
-        <a class="card" href="notes/si-intro.pdf" target="_blank" rel="noopener">
-          <div class="kicker">Notes · <span class="badge">Synthèse</span></div>
-          <h4>Notes SI — Introduction</h4>
-          <p>Définitions clés, rôle d’un SI, exemples réels.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
-
-        <a class="card" href="notes/si-intro.md" target="_blank" rel="noopener">
-          <div class="kicker">Notes · <span class="badge">Markdown</span></div>
-          <h4>Version texte (markdown)</h4>
-          <p>Liens rapides & titres H2/H3 pour naviguer.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill link">MD</span>
-        </a>
+      <p class="subtitle">Cette section accueillera tes notes personnelles.</p>
+      <div class="info-grid">
+        <div class="ibox">
+          <h4>Compétence visée</h4>
+          <ul>
+            <li>Développer une autonomie dans la prise de notes et la gestion des ressources personnelles.</li>
+          </ul>
+        </div>
+        <div class="ibox">
+          <h4>Critères de réussite</h4>
+          <ul>
+            <li>Les notes de cours sont <strong>claires</strong>, <strong>structurées</strong> et <strong>accessibles</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- 3) DOCS SI -->
     <section id="docs" class="section" aria-labelledby="t-docs">
       <h2 class="title" id="t-docs"><span class="dot"></span>📄 Rubrique 3 — Documents d’un SI</h2>
-      <p class="subtitle">Range par type : <strong>bpmn/</strong>, <strong>uml/</strong>, <strong>specs/</strong>. Utilise PDF/PNG/SVG lisibles.</p>
-
-      <div class="cards">
-        <a class="card" href="docs-si/bpmn/processus-ventes.pdf" target="_blank" rel="noopener">
-          <div class="kicker">BPMN · <span class="badge">Process</span></div>
-          <h4>Processus de ventes (BPMN)</h4>
-          <p>Du devis à la facture : diagramme + légende.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
-
-        <a class="card" href="docs-si/uml/" target="_blank" rel="noopener">
-          <div class="kicker">UML · <span class="badge">Dossier</span></div>
-          <h4>Diagrammes UML</h4>
-          <p>Cas d’utilisation, classes, séquence (PNG/PDF).</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill link">Ouvrir</span>
-        </a>
+      <p class="subtitle">Ici figureront les documents liés au système d’information.</p>
+      <div class="info-grid">
+        <div class="ibox">
+          <h4>Compétence visée</h4>
+          <ul>
+            <li>Identifier, rédiger et organiser des documents liés à un système d’information.</li>
+          </ul>
+        </div>
+        <div class="ibox">
+          <h4>Critères de réussite</h4>
+          <ul>
+            <li>Les documents sont <strong>rédigés</strong>, <strong>classés</strong> et <strong>bien présentés</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- 4) CERTIFS -->
     <section id="certifs" class="section" aria-labelledby="t-certifs">
       <h2 class="title" id="t-certifs"><span class="dot"></span>🎖️ Rubrique 4 — Certifications</h2>
-      <p class="subtitle">Ajoute tes attestations (PDF/PNG) + 1 ligne “Compétences : …”.</p>
-
-      <div class="cards">
-        <a class="card" href="certifs/attestation-x.pdf" target="_blank" rel="noopener">
-          <div class="kicker">Attestation · <span class="badge">2025</span></div>
-          <h4>Attestation X</h4>
-          <p>Compétences : SQL, Modélisation, DataViz.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
-        <a class="card" href="certifs/certification-y.png" target="_blank" rel="noopener">
-          <div class="kicker">Certification · <span class="badge">2024</span></div>
-          <h4>Certification Y</h4>
-          <p>Compétences : Gestion de projet, BPMN.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill link">Image</span>
-        </a>
+      <p class="subtitle">Zone dédiée aux attestations/certifications.</p>
+      <div class="info-grid">
+        <div class="ibox">
+          <h4>Compétence visée</h4>
+          <ul>
+            <li>Valoriser quelques compétences par des attestations ou certifications obtenues.</li>
+          </ul>
+        </div>
+        <div class="ibox">
+          <h4>Critères de réussite</h4>
+          <ul>
+            <li>Les certificats sont déposés en format <strong>lisible</strong> (PDF ou image) et <strong>correctement identifiés</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- 5) PROJET FINAL -->
     <section id="projet" class="section" aria-labelledby="t-projet">
       <h2 class="title" id="t-projet"><span class="dot"></span>🚀 Rubrique 5 — Projet final</h2>
-      <p class="subtitle">Pitch clair (problème → solution), périmètre, livrables, résultats.</p>
-
-      <div class="cards">
-        <a class="card" href="projet-final/readme.md" target="_blank" rel="noopener">
-          <div class="kicker">Projet · <span class="badge">README</span></div>
-          <h4>Présentation & consignes d’exécution</h4>
-          <p>Stack, étapes, jeux d’essai, critères d’éval.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill link">MD</span>
-        </a>
-        <a class="card" href="projet-final/rapport.pdf" target="_blank" rel="noopener">
-          <div class="kicker">Projet · <span class="badge">Rapport</span></div>
-          <h4>Rapport complet (PDF)</h4>
-          <p>Méthodo, modèles, résultats, limites, suites.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
+      <p class="subtitle">Cette section présentera le projet final.</p>
+      <div class="info-grid">
+        <div class="ibox">
+          <h4>Compétence visée</h4>
+          <ul>
+            <li>Concevoir et réaliser un projet numérique intégrant les compétences acquises.</li>
+          </ul>
+        </div>
+        <div class="ibox">
+          <h4>Critères de réussite</h4>
+          <ul>
+            <li>Le projet est <strong>réalisé</strong>, <strong>documenté</strong> et <strong>présenté de manière professionnelle</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- 6) DIAPORAMA -->
     <section id="diapo" class="section" aria-labelledby="t-diapo">
       <h2 class="title" id="t-diapo"><span class="dot"></span>🎞️ Rubrique 6 — Diaporama</h2>
-      <p class="subtitle">Version PDF pour la soutenance (polices lisibles, peu de texte).</p>
-
-      <div class="cards">
-        <a class="card" href="diaporama/soutenance.pdf" target="_blank" rel="noopener">
-          <div class="kicker">Soutenance · <span class="badge">PDF</span></div>
-          <h4>Diaporama final</h4>
-          <p>Plan clair : Contexte → Méthode → Résultats → Suite.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
+      <p class="subtitle">Ici viendra le PDF de la soutenance.</p>
+      <div class="info-grid">
+        <div class="ibox">
+          <h4>Compétence visée</h4>
+          <ul>
+            <li>Synthétiser et présenter un projet de manière claire et professionnelle.</li>
+          </ul>
+        </div>
+        <div class="ibox">
+          <h4>Critères de réussite</h4>
+          <ul>
+            <li>Le diaporama est <strong>structuré</strong>, <strong>visuellement lisible</strong> et <strong>adapté à l’oral</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- 7) RESSOURCES -->
     <section id="ressources" class="section" aria-labelledby="t-ress">
       <h2 class="title" id="t-ress"><span class="dot"></span>🔗 Rubrique 7 — Autres ressources</h2>
-      <p class="subtitle">Quelques liens utiles (veille, articles, outils). Garde ça court & pertinent.</p>
-
-      <div class="cards">
-        <a class="card" href="assets/pdf/veille-si.pdf" target="_blank" rel="noopener">
-          <div class="kicker">Veille · <span class="badge">Tendances</span></div>
-          <h4>Veille SI — Octobre</h4>
-          <p>3 actus clés + implications concrètes.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill pdf">PDF</span>
-        </a>
-
-        <a class="card" href="https://miage.fr" target="_blank" rel="noopener">
-          <div class="kicker">Lien · <span class="badge">Externe</span></div>
-          <h4>MIAGE — Références</h4>
-          <p>Rappels de cours, ressources, bonnes pratiques.</p>
-          <div class="beads"><span></span><div class="line"></div><span></span></div>
-          <span class="pill link">Ouvrir</span>
-        </a>
+      <p class="subtitle">Cette section listera tes ressources complémentaires.</p>
+      <div class="info-grid">
+        <div class="ibox">
+          <h4>Compétence visée</h4>
+          <ul>
+            <li>Développer une capacité de veille et d’enrichissement personnel par des ressources complémentaires.</li>
+          </ul>
+        </div>
+        <div class="ibox">
+          <h4>Critères de réussite</h4>
+          <ul>
+            <li>Les ressources ajoutées sont <strong>pertinentes</strong>, <strong>variées</strong> et <strong>correctement référencées</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
-
   </main>
 
   <footer>
