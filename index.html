@@ -53,18 +53,15 @@
     }
     .title{display:flex;align-items:center;gap:.6rem;font-size:1.4rem;margin-bottom:1rem}
     .dot{width:12px;height:12px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 4px rgba(255,255,255,.4)}
-    .info-grid{display:grid;gap:1rem;grid-template-columns:1fr}
-    @media(min-width:780px){.info-grid{grid-template-columns:repeat(2,1fr)}}
+
     .ibox{
-      border-radius:16px;padding:1rem 1.2rem;
+      border-radius:16px;padding:1rem 1.2rem;margin-bottom:0.8rem;
       background:linear-gradient(135deg,var(--lavande),var(--peche),var(--menthe));
       box-shadow:0 6px 14px rgba(0,0,0,.05);transition:.3s;
     }
     .ibox:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,.08)}
-    .ibox h4{margin:.2rem 0 .5rem;font-size:1.05rem}
-    .ibox ul{margin:.2rem 0 0;padding-left:1.1rem}
-    .ibox li{margin:.2rem 0}
-    p.note{margin-top:1rem;padding:.8rem 1rem;border-left:4px solid var(--lavande);
+
+    p.note{margin-top:.5rem;padding:.8rem 1rem;border-left:4px solid var(--lavande);
       background:rgba(255,255,255,.6);border-radius:10px;font-size:.95rem}
     footer{text-align:center;color:#444;font-weight:500;padding:1.5rem;
       background:rgba(255,255,255,.6);border-top:2px solid rgba(255,255,255,.3);backdrop-filter:blur(8px)}
@@ -88,172 +85,146 @@
 
 <main class="wrap">
 
-  <!-- Rubrique 1 -->
+  <!-- RUBRIQUE 1 -->
   <section id="travaux" class="section">
     <h2 class="title"><span class="dot"></span>🗂️ Rubrique 1 — Travaux demandés</h2>
-    <div class="info-grid">
-      <div class="ibox">
-        <h4>Compétence visée</h4>
-        <ul><li>Gérer et organiser ses productions académiques.</li></ul>
-      </div>
-      <div class="ibox">
-        <h4>Critères de réussite</h4>
-        <ul><li>Tous les travaux sont <strong>complets</strong> et <strong>correctement nommés</strong>.</li></ul>
-      </div>
+
+    <div class="ibox">
+      Cette rubrique regroupe mes travaux de TD (énoncés, corrigés, schémas, tableaux…).
     </div>
-<p class="note">
-  📎 <strong>TD1 – Introduction aux Systèmes d'information</strong><br>
-  <a href="TD_1_SI.docx" target="_blank">TD_1_SI.docx</a><br>
-  <a href="td_PGI_exercice.docx" target="_blank">td_PGI_exercice.docx</a><br>
-  <a href="Akida_PGI_exercice.xls" target="_blank">Akida_PGI_exercice.xls</a>
-</p>
-<p class="note">
-  📎 <strong>TD2 – Odoo & Étude de cas : Chaîne de supermarchés</strong><br>
-  📝 <a href="td2_odo.odt" target="_blank">td2_odo.odt</a><br>
-  📘 <a href="TP Odoo.pdf" target="_blank">TP Odoo.pdf</a><br>
-  📄 <a href="TD2 si.odt" target="_blank">TD2 si.odt</a>
-</p>
+
+    <!-- TD1 -->
     <p class="note">
-  📎 <strong>TD3 – Diagrammes de flux et acteurs</strong><br>
-  📘 <a href="diagramme_flux_1.pdf" target="_blank">diagramme_flux_1.pdf</a><br>
-  🧩 <a href="training shéma acteur flux (1).pdf" target="_blank">training shéma acteur flux (1).pdf</a><br>
-  📝 <a href="dossier 3 (1).docx" target="_blank">dossier 3 (1).docx</a>
-</p>
-  <p class="note">
-  📎 <strong>TD4 – Processus organisationnel & Schéma événement-résultat</strong><br>
+      📎 <strong>TD1 – Introduction aux Systèmes d'information</strong><br>
+      <a href="TD_1_SI.docx" target="_blank">TD_1_SI.docx</a><br>
+      <a href="td_PGI_exercice.docx" target="_blank">td_PGI_exercice.docx</a><br>
+      <a href="Akida_PGI_exercice.xls" target="_blank">Akida_PGI_exercice.xls</a>
+    </p>
 
-  📘 <a href="A2.2_TD2_ProcessusOrganisationnel.pdf" target="_blank">
-    A2.2_TD2_ProcessusOrganisationnel.pdf
-  </a><br>
+    <!-- TD2 -->
+    <p class="note">
+      📎 <strong>TD2 – Odoo & Étude de cas : Chaîne de supermarchés</strong><br>
+      📝 <a href="td2_odo.odt" target="_blank">td2_odo.odt</a><br>
+      📘 <a href="TP Odoo.pdf" target="_blank">TP Odoo.pdf</a><br>
+      📄 <a href="TD2 si.odt" target="_blank">TD2 si.odt</a>
+    </p>
 
-  📘 <a href="Livrables SI.pdf" target="_blank">
-    Livrables SI.pdf
-  </a><br>
+    <!-- TD3 -->
+    <p class="note">
+      📎 <strong>TD3 – Diagrammes de flux et acteurs</strong><br>
+      📘 <a href="diagramme_flux_1.pdf" target="_blank">diagramme_flux_1.pdf</a><br>
+      🧩 <a href="training shéma acteur flux (1).pdf" target="_blank">training shéma acteur flux (1).pdf</a><br>
+      📝 <a href="dossier 3 (1).docx" target="_blank">dossier 3 (1).docx</a>
+    </p>
 
-  🖼️ <a href="TD4_schéma.png" target="_blank">
-    TD4_schéma.png (schéma événement-résultat)
-  </a>
-</p>
-  <p class="note">
-  📎 <strong>TD5 – MCD & Diagramme de Gantt</strong><br>
+    <!-- TD4 -->
+    <p class="note">
+      📎 <strong>TD4 – Processus organisationnel & Schéma événement-résultat</strong><br>
+      📘 <a href="A2.2_TD2_ProcessusOrganisationnel.pdf" target="_blank">
+        A2.2_TD2_ProcessusOrganisationnel.pdf
+      </a><br>
+      📘 <a href="Livrables SI.pdf" target="_blank">
+        Livrables SI.pdf
+      </a><br>
+      🖼️ <a href="TD4_schéma.png" target="_blank">
+        TD4_schéma.png (schéma événement-résultat)
+      </a>
+    </p>
 
-  📘 <a href="Gantt correction.pdf" target="_blank">
-    Gantt correction.pdf 
-  </a><br>
-
-  🧩 <a href="Schéma_MCD.drawio.pdf" target="_blank">
-    Schéma_MCD.drawio.pdf 
-  </a><br>
-
-  📄 <a href="TD MCD.pdf" target="_blank">
-    TD MCD.pdf 
-  </a><br>
-
-  📝 <a href="tp gantt.docx" target="_blank">
-    tp gantt.docx 
-  </a>
-</p>
-
-
-
-
-
-    
-
-
-
-
-
+    <!-- TD5 -->
+    <p class="note">
+      📎 <strong>TD5 – MCD & Diagramme de Gantt</strong><br>
+      📘 <a href="Gantt correction.pdf" target="_blank">
+        Gantt correction.pdf (diagramme de Gantt)
+      </a><br>
+      🧩 <a href="Schéma_MCD.drawio.pdf" target="_blank">
+        Schéma_MCD.drawio.pdf (modèle conceptuel de données)
+      </a><br>
+      📄 <a href="TD MCD.pdf" target="_blank">
+        TD MCD.pdf (exercices MERISE + solutions)
+      </a><br>
+      📝 <a href="tp gantt.docx" target="_blank">
+        tp gantt.docx (TP Gantt)
+      </a>
+    </p>
   </section>
 
+  <!-- RUBRIQUE 2 -->
   <section id="notes" class="section">
     <h2 class="title"><span class="dot"></span>📝 Rubrique 2 — Notes de cours</h2>
-    <div class="info-grid">
-      <div class="ibox">
-        <h4>Compétence visée</h4>
-        <ul><li>Développer une autonomie dans la prise de notes et la gestion des ressources personnelles.</li></ul>
-      </div>
-      <div class="ibox">
-        <h4>Critères de réussite</h4>
-        <ul><li>Les notes sont <strong>claires</strong>, <strong>structurées</strong> et <strong>accessibles</strong>.</li></ul>
-      </div>
+
+    <div class="ibox">
+      Cette rubrique rassemble mes notes de cours, fiches de synthèse et résumés personnels.
     </div>
-    <p class="note">📎 Dépose ici tes fichiers de notes (PDF, Word, images ou textes).</p>
+
+    <p class="note">
+      📎 Dépose ici tes fichiers de notes (PDF, Word, images ou textes).
+    </p>
   </section>
 
+  <!-- RUBRIQUE 3 -->
   <section id="docs" class="section">
     <h2 class="title"><span class="dot"></span>📄 Rubrique 3 — Documents d’un SI</h2>
-    <div class="info-grid">
-      <div class="ibox">
-        <h4>Compétence visée</h4>
-        <ul><li>Identifier, rédiger et organiser des documents liés à un système d’information.</li></ul>
-      </div>
-      <div class="ibox">
-        <h4>Critères de réussite</h4>
-        <ul><li>Les documents sont <strong>rédigés</strong>, <strong>classés</strong> et <strong>bien présentés</strong>.</li></ul>
-      </div>
+
+    <div class="ibox">
+      Ici, je dépose les documents liés au système d’information : diagrammes, schémas, modèles, etc.
     </div>
-    <p class="note">📎 Ajoute ici tes diagrammes, schémas, fichiers PDF ou images de ton système d’information.</p>
+
+    <p class="note">
+      📎 Ajoute ici tes diagrammes, schémas, fichiers PDF ou images de ton système d’information.
+    </p>
   </section>
 
+  <!-- RUBRIQUE 4 -->
   <section id="certifs" class="section">
     <h2 class="title"><span class="dot"></span>🎖️ Rubrique 4 — Certifications</h2>
-    <div class="info-grid">
-      <div class="ibox">
-        <h4>Compétence visée</h4>
-        <ul><li>Valoriser ses compétences par des attestations ou certifications obtenues.</li></ul>
-      </div>
-      <div class="ibox">
-        <h4>Critères de réussite</h4>
-        <ul><li>Les certificats sont <strong>lisibles</strong> et <strong>correctement identifiés</strong>.</li></ul>
-      </div>
+
+    <div class="ibox">
+      Cette rubrique met en avant mes attestations, badges et certifications en lien avec le module ou le numérique.
     </div>
-    <p class="note">📎 Insère ici tes attestations, badges ou certificats (PDF ou image).</p>
+
+    <p class="note">
+      📎 Insère ici tes attestations, badges ou certificats (PDF ou image).
+    </p>
   </section>
 
+  <!-- RUBRIQUE 5 -->
   <section id="projet" class="section">
     <h2 class="title"><span class="dot"></span>🚀 Rubrique 5 — Projet final</h2>
-    <div class="info-grid">
-      <div class="ibox">
-        <h4>Compétence visée</h4>
-        <ul><li>Concevoir et réaliser un projet numérique intégrant les compétences acquises.</li></ul>
-      </div>
-      <div class="ibox">
-        <h4>Critères de réussite</h4>
-        <ul><li>Le projet est <strong>réalisé</strong>, <strong>documenté</strong> et <strong>présenté professionnellement</strong>.</li></ul>
-      </div>
+
+    <div class="ibox">
+      Rubrique dédiée au projet final : description, rapport, éventuel code et documents complémentaires.
     </div>
-    <p class="note">📎 Ajoute ici ton rapport, ton code, ou les livrables de ton projet final.</p>
+
+    <p class="note">
+      📎 Ajoute ici ton rapport, ton code, ou les livrables de ton projet final.
+    </p>
   </section>
 
+  <!-- RUBRIQUE 6 -->
   <section id="diapo" class="section">
     <h2 class="title"><span class="dot"></span>🎞️ Rubrique 6 — Diaporama</h2>
-    <div class="info-grid">
-      <div class="ibox">
-        <h4>Compétence visée</h4>
-        <ul><li>Synthétiser et présenter un projet de manière claire et professionnelle.</li></ul>
-      </div>
-      <div class="ibox">
-        <h4>Critères de réussite</h4>
-        <ul><li>Le diaporama est <strong>structuré</strong>, <strong>lisible</strong> et <strong>adapté à l’oral</strong>.</li></ul>
-      </div>
+
+    <div class="ibox">
+      Cette rubrique contient le diaporama utilisé pour la soutenance du projet (ou plusieurs versions).
     </div>
-    <p class="note">📎 Dépose ici ton diaporama (PDF ou PowerPoint) pour la soutenance.</p>
+
+    <p class="note">
+      📎 Dépose ici ton diaporama (PDF ou PowerPoint) pour la soutenance.
+    </p>
   </section>
 
+  <!-- RUBRIQUE 7 -->
   <section id="ressources" class="section">
     <h2 class="title"><span class="dot"></span>🔗 Rubrique 7 — Autres ressources</h2>
-    <div class="info-grid">
-      <div class="ibox">
-        <h4>Compétence visée</h4>
-        <ul><li>Développer une capacité de veille et d’enrichissement personnel grâce à des ressources complémentaires.</li></ul>
-      </div>
-      <div class="ibox">
-        <h4>Critères de réussite</h4>
-        <ul><li>Les ressources sont <strong>pertinentes</strong>, <strong>variées</strong> et <strong>référencées</strong>.</li></ul>
-      </div>
+
+    <div class="ibox">
+      Ici, je rassemble des ressources complémentaires : articles, liens utiles, tutoriels, vidéos, etc.
     </div>
-    <p class="note">📎 Dépose ici des liens, PDF, articles ou documents complémentaires utiles à ton apprentissage.</p>
+
+    <p class="note">
+      📎 Dépose ici des liens, PDF, articles ou documents complémentaires utiles à ton apprentissage.
+    </p>
   </section>
 
 </main>
@@ -264,14 +235,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
